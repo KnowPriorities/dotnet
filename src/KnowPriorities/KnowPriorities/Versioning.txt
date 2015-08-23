@@ -1,0 +1,7 @@
+﻿Versioning is done both on the NuGet/Assembly level, but also as folder namespacing.
+
+This is done so versions can be replaced in their entirety without preventing the ability for bug fixes on prior versions.
+
+It is intended to only support 1 prior version, mainly or only as bug fixes.
+
+This is to allow a gradual progression from major version to version, at least as best as possible.

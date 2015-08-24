@@ -123,5 +123,18 @@ namespace KnowPriorities.Tests.v1.Stages.Preparation.Steps
 
         }
 
+        [Theory,
+         InlineData(long.MinValue, 1), InlineData(-1, 1),
+         InlineData(0, 1), InlineData(1, 1),
+         InlineData(2, 2), InlineData(long.MaxValue, long.MaxValue)]
+        public void NormalizesScope(long scope, long expected)
+        {
+            var item = new Item() {Scope = scope};
+
+            ApplyItemScopeAdjustmentsFromTags.NormalizeScope(item);
+
+            Assert.Equal(expected, item.Scope);
+        }
+
     }
 }

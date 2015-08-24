@@ -24,7 +24,7 @@ namespace KnowPriorities.v1.Models
         /// Can be a number, or even expressed as a calculation of Time X Cost. Don't assume scope.  Item is defined, they should know.
         /// </summary>
         [Required]
-        [Range(1, 10)]//long.MaxValue)]
+        [Range(1, long.MaxValue)]
         [JsonProperty("scope")]
         public long Scope { get; set; }
         

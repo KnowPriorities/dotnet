@@ -38,13 +38,10 @@ namespace KnowPriorities.v1.Engine.Pipeline.Stages.Preparation.Steps
             NormalizeScope(item);
         }
 
-        public void NormalizeScope(Item item)
+        public static void NormalizeScope(Item item)
         {
             if (item.Scope < 1)
                 item.Scope = 1;
-
-            if (item.Scope > 10)
-                item.Scope = 10;
         }
 
     }
